@@ -9,7 +9,7 @@ ghpages.publish(
     repo: 'https://github.com/christreanor/GetAJob.git',
     dest: '.',
     add: true,
-    message: 'Auto-generated commit',
+    message: `Auto-generated commit on ${new Date().toISOString()}`,
     silent: false,
     callback: function(err) {
       if (err) {
