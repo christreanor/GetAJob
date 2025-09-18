@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.[contenthash].js',
+    filename: 'js/[name].[contenthash:8].js',
+    chunkFilename: 'js/[name].[contenthash:8].chunk.js',
     clean: true,
     publicPath: '/GetAJob/',
   },
@@ -42,4 +43,22 @@ module.exports = {
     }),
   ],
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      name: false,
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
+    },
+    runtimeChunk: 'single',
+  },
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
 };
