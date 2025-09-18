@@ -1,10 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
+    clean: true,
+    publicPath: '/GetAJob/',
   },
   module: {
     rules: [
@@ -30,6 +33,13 @@ module.exports = {
     },
     port: 3000,
     hot: true,
+    historyApiFallback: true,
   },
-  mode: 'development',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      favicon: './public/favicon.ico',
+    }),
+  ],
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
 };

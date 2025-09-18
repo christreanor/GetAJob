@@ -1,13 +1,15 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../store/slices/appSlice';
 import Home from '../pages/Home';
 import Profile from '../pages/Profile';
 import Login from '../pages/Login';
+import MatildaMan from '../pages/MatildaMan';
 import '../styles/global.css';
 import '../styles/layout.css';
 import '../styles/auth.css';
 import '../styles/responsive.css';
+import '../styles/game.css';
 
 function App() {
   const dispatch = useDispatch();
@@ -25,6 +27,7 @@ function App() {
             ) : (
               <Link to="/login">Login</Link>
             )}
+            <Link to="/game">Play Game</Link>
           </div>
           <button className="theme-toggle" onClick={() => dispatch(toggleTheme())}>
             {theme === 'light' ? '🌙' : '☀️'}
@@ -36,6 +39,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/game" element={<MatildaMan />} />
           </Routes>
         </div>
       </div>
