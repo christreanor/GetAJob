@@ -5,8 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].[contenthash:8].js',
-    chunkFilename: 'js/[name].[contenthash:8].chunk.js',
+    filename: '[name].[hash:4].js',
+    chunkFilename: '[id].[hash:4].js',
     clean: true,
     publicPath: '/GetAJob/',
   },
