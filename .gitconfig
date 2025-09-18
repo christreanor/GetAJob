@@ -1,0 +1,27 @@
+[user]
+    name = chris treanor
+    email = treanordude@gmail.com
+
+[core]
+    editor = code
+    autocrlf = true
+    whitespace = cr-at-eol
+
+[color]
+    ui = auto
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
