@@ -1,0 +1,22 @@
+{
+  "name": "getajob",
+  "version": "1.0.0",
+  "description": "This project has been set up so that I can get back in touch with my ***technical side***.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christreanor/GetAJob.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christreanor/GetAJob/issues"
+  },
+  "homepage": "https://github.com/christreanor/GetAJob#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.35.0"
+  }
+}
