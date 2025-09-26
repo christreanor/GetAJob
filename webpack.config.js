@@ -8,7 +8,7 @@ module.exports = {
     filename: '[name].[contenthash:8].js',
     chunkFilename: '[name].[contenthash:8].chunk.js',
     clean: true,
-    publicPath: '/GetAJob/',
+    publicPath: '/',
   },
   module: {
     rules: [

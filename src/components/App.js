@@ -3,15 +3,16 @@ import { useSelector, useDispatch } from 'react-redux';
 import { toggleTheme } from '../store/slices/appSlice';
 import { lazy, Suspense } from 'react';
 
-const Home = lazy(() => import('../pages/Home'));
-const Profile = lazy(() => import('../pages/Profile'));
-const Login = lazy(() => import('../pages/Login'));
-const MatildaMan = lazy(() => import('../pages/MatildaMan'));
 import '../styles/global.css';
 import '../styles/layout.css';
 import '../styles/auth.css';
 import '../styles/responsive.css';
 import '../styles/game.css';
+
+const Home = lazy(() => import('../pages/Home'));
+const Profile = lazy(() => import('../pages/Profile'));
+const Login = lazy(() => import('../pages/Login'));
+const MatildaMan = lazy(() => import('../pages/MatildaMan'));
 
 function App() {
   const dispatch = useDispatch();
